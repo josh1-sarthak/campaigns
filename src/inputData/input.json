@@ -1,0 +1,57 @@
+{
+  "data": [{
+      "name": "Auto Chess",
+      "region": "US",
+      "createdOn": 1572201000000,
+      "price": "View Pricing",
+      "csv": "CSV",
+      "report": "Report",
+      "image_url":"../assets/images/autochess.png"
+    },
+    {
+      "name": "Pubg Mobile",
+      "region": "CA, FR",
+      "createdOn": 1608229800000,
+      "price": "View Pricing",
+      "csv": "CSV",
+      "report": "Report",
+      "image_url":"../assets/images/pubg.png"
+    },
+    {
+      "name": "Flow Free",
+      "region": "AU",
+      "createdOn": 1623263400000,
+      "price": "View Pricing",
+      "csv": "CSV",
+      "report": "Report",
+      "image_url":"../assets/images/flowfree.png"
+    },
+    {
+      "name": "Shadow Fight 3",
+      "region": "UK",
+      "createdOn": 1634581800000,
+      "price": "View Pricing",
+      "csv": "CSV",
+      "report": "Report",
+      "image_url":"../assets/images/shadow-fight3.png"
+    },
+    {
+      "name": "Mortal Combat",
+      "region": "US",
+      "createdOn": 1629052200000,
+      "price": "View Pricing",
+      "csv": "CSV",
+      "report": "Report",
+      "image_url":"../assets/images/mortal-kombat.png"
+    },
+    {
+      "name": "Summoners War",
+      "region": "UK",
+      "createdOn": 1616351400000,
+      "price": "View Pricing",
+      "csv": "CSV",
+      "report": "Report",
+      "image_url":"../assets/images/summoners-war.png"
+    }
+  ]
+}
