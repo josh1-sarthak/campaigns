@@ -2,7 +2,7 @@
   "name": "campaigns",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://nick2496.github.io/campaigns/",
+  "homepage": "http://nick2496.github.io/campaigns/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
