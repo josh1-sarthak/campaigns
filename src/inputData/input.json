@@ -6,7 +6,7 @@
       "price": "View Pricing",
       "csv": "CSV",
       "report": "Report",
-      "image_url":"../assets/images/autochess.png"
+      "image_url":"/assets/images/autochess.png"
     },
     {
       "name": "Pubg Mobile",
@@ -15,7 +15,7 @@
       "price": "View Pricing",
       "csv": "CSV",
       "report": "Report",
-      "image_url":"../assets/images/pubg.png"
+      "image_url":"/assets/images/pubg.png"
     },
     {
       "name": "Flow Free",
@@ -24,7 +24,7 @@
       "price": "View Pricing",
       "csv": "CSV",
       "report": "Report",
-      "image_url":"../assets/images/flowfree.png"
+      "image_url":"/assets/images/flowfree.png"
     },
     {
       "name": "Shadow Fight 3",
@@ -33,7 +33,7 @@
       "price": "View Pricing",
       "csv": "CSV",
       "report": "Report",
-      "image_url":"../assets/images/shadow-fight3.png"
+      "image_url":"/assets/images/shadow-fight3.png"
     },
     {
       "name": "Mortal Combat",
@@ -42,7 +42,7 @@
       "price": "View Pricing",
       "csv": "CSV",
       "report": "Report",
-      "image_url":"../assets/images/mortal-kombat.png"
+      "image_url":"/assets/images/mortal-kombat.png"
     },
     {
       "name": "Summoners War",
@@ -51,7 +51,7 @@
       "price": "View Pricing",
       "csv": "CSV",
       "report": "Report",
-      "image_url":"../assets/images/summoners-war.png"
+      "image_url":"/assets/images/summoners-war.png"
     }
   ]
 }

@@ -36,7 +36,7 @@ const TableContent = (props) => {
               </Table.Cell>
               <Table.Cell> 
                 <Header as='h4' image>
-                  <Image src={`${item.image_url}`} />
+                  <Image src={process.env.PUBLIC_URL + item.image_url} />
                   <Header.Content>
                     {item.name}
                     <Header.Subheader> {item.region} </Header.Subheader>
@@ -51,8 +51,6 @@ const TableContent = (props) => {
               {/* to include schedule again field in json or not for targetting updated date through pick up calendar */}
               <Table.Cell> 
               <Reschedule item={item} onTableUpdate={props.onTabUpdate} />
-              {/* <Image src={calIcon} alt='calendar' verticalAlign='middle' /> 
-              Schedule Again  */}
               </Table.Cell> 
             </Table.Row> 
           )}
@@ -92,7 +90,7 @@ const Pricing = (props) => {
         <span className='viewPrice'><Image src={priceIcon} alt='price' verticalAlign='middle' /> {props.item.price} </span>}>
           <Modal.Content>
             <div className='headModal'>
-              <Image src={`${props.item.image_url}`} />
+              <Image src={process.env.PUBLIC_URL + props.item.image_url} />
                 <span className='modalHeadContent'> 
                 <strong> {props.item.name} </strong> <br/>
                 {props.item.region} </span>
