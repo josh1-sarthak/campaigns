@@ -1,13 +1,52 @@
+
+/* used flexbox to make semantic ui react tab responsive */
 .wrapped {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-.viewPrice, button, .reschedule {
+.viewPrice, .reschedule {
     cursor: pointer;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #7788A3;
 }
 
+.noContentInside {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #7788A3;
+}
+
+/* modal button */
+button {
+    cursor: pointer;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    background: #ffffff;
+    border: 2px solid #181B34;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+    text-align: center;
+    color: #181B34;
+    padding: 0.75rem 1.50rem 0.75rem 1.50rem;
+}
+
+/* used flexbox to make modal head responsive */
 .headModal {
     display: flex;
     justify-content: flex-start;
@@ -16,10 +55,51 @@
 .modalHeadContent {
     margin-left: 1rem;
     align-self: flex-end;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #9CA2B7;
+    display: flex;
+    flex-direction: column;
+}
+
+.modalHeadContent strong {  
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+    color: #2B416C;
 }
 
 .bodyModal {
     padding: 2em 0;
+}
+
+.bodyModal h3 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    /* identical to box height, or 133% */
+    color: #2B416C;
+}
+
+/* pricing details */
+p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    color: #7788A3;
+}
+
+p strong {
+    color: #556789;
 }
 
 .modalBtn {
@@ -30,19 +110,117 @@
     display: flex;
 }
 
+/* modifying existing styles set by semantic ui library */
+
+/* tab menus */
 .ui.secondary.pointing.menu .active.item {
     border-color: #83A515 !important;
     color: #83A515 !important;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    /* position: absolute; */
+    /* width: 178px; */
+    height: 28px;
+    /* left: 200px; */
+    /* top: 210px; */
 }
 
 .ui.secondary.pointing.menu .item {
     color: #556789 !important;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    /* identical to box height, or 156% */
+    /* position: absolute; */
+    /* width: 128px; */
+    height: 28px;
+    /* left: 414px;
+    top: 210px; */
 }
 
 .ui.table thead th {
     color: #556789;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    /* width: 82px; */
+    /* height: 24px; */
+    /* left: 369px; */
+    /* top: 305px; */
+    background: #F1F1F4;
 }
 
 .ui.table tr td {
+    color: #2B416C;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+}
+
+/* emphasis in date column */
+
+em {
+    font-size: 14px;
+    line-height: 24px;
     color: #7788A3;
 }
+
+/* main heading */
+
+.ui.left.aligned.header {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 50px;
+    /* identical to box height, or 104% */
+    color: #2B416C;
+    margin-bottom: 2rem;
+}
+
+/* campaign column */
+.ui.header>.image+.content, .ui.header>img+.content {
+    color: #556789;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+}
+
+/* emphasis in campaign column */
+h4.ui.header .sub.header {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #9CA2B7;
+}
+
+/* segment around table */
+.ui.segment {
+   padding: 0 !important;
+}
+
+
+.ui.secondary.menu {
+    margin-bottom: 2rem;
+}
+/* 
+.ui.secondary.pointing.menu{
+    margin-bottom: 2rem;
+} */
+

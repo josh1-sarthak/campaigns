@@ -13,10 +13,10 @@ const calculateDays = 1000*60*60*24;
 let today = Date.now();
 
 const TableContent = (props) => {
+  // t for localization
     const { t } = props;
 
   return (
-    <div>
       <Table>
         <Table.Header>
           <Table.Row>
@@ -32,7 +32,7 @@ const TableContent = (props) => {
             <Table.Row key={item.name}>
               <Table.Cell> 
                 {new Date(item.createdOn).toLocaleString('default', { month:'short'})} {new Date(item.createdOn).getFullYear()}, {new Date(item.createdOn).getDate()} <br/>
-                {Math.abs(Math.ceil((item.createdOn - today)/calculateDays))} {t("Days")} {props.className}
+                <em> {Math.abs(Math.ceil((item.createdOn - today)/calculateDays))} {t("Days")} {props.className} </em>
               </Table.Cell>
               <Table.Cell> 
                 <Header as='h4' image>
@@ -44,24 +44,22 @@ const TableContent = (props) => {
                 </Header>
               </Table.Cell>
               <Table.Cell>
-                <Pricing item={item} />
+                <Pricing item={item} tablelocale={t}/>
               </Table.Cell>
-              <Table.Cell> <Image src={csvIcon} alt='csv' verticalAlign='middle' /> {item.csv} </Table.Cell>
-              <Table.Cell> <Image src={reportIcon} alt='report' verticalAlign='middle' /> {item.report} </Table.Cell>
-              {/* to include schedule again field in json or not for targetting updated date through pick up calendar */}
+              <Table.Cell> <span className="noContentInside"> <Image src={csvIcon} alt='csv' verticalAlign='middle' /> {item.csv} </span> </Table.Cell>
+              <Table.Cell> <span className="noContentInside"> <Image src={reportIcon} alt='report' verticalAlign='middle' /> {t(item.report)} </span> </Table.Cell>
               <Table.Cell> 
-              <Reschedule item={item} onTableUpdate={props.onTabUpdate} />
+              <Reschedule item={item} onTableUpdate={props.onTabUpdate} tablelocale={t} />
               </Table.Cell> 
             </Table.Row> 
           )}
         </Table.Body>
       </Table>
-    </div>
   )
 }
 
+// Pricing Component - renders Pricing Modal
 const Pricing = (props) => {
-  // renders pricing modal
   const [open, setOpen] = useState(false);
 
   const handleChange = () => {
@@ -87,22 +85,22 @@ const Pricing = (props) => {
     <div>
         <Modal size='mini' onClose={handleChange} onOpen={handleChange} open={open} 
         trigger={
-        <span className='viewPrice'><Image src={priceIcon} alt='price' verticalAlign='middle' /> {props.item.price} </span>}>
+        <span className='viewPrice'><Image src={priceIcon} alt='price' verticalAlign='middle' /> {props.tablelocale(props.item.price)} </span>}>
           <Modal.Content>
             <div className='headModal'>
               <Image src={process.env.PUBLIC_URL + props.item.image_url} />
-                <span className='modalHeadContent'> 
+                <div className='modalHeadContent'> 
                 <strong> {props.item.name} </strong> <br/>
-                {props.item.region} </span>
+                {props.item.region} </div>
             </div>
             <div className='bodyModal'>
-              <h3> Pricing </h3>
+              <h3> {props.tablelocale("Pricing")} </h3>
               {subscriptions.map(pack => 
-                <p key={pack.duration} style={{textAlign: 'left'}}> {pack.duration} <span style={{float: 'right'}}><strong> {pack.cost} </strong></span> </p>
+                <p key={pack.duration} style={{textAlign: 'left'}}> {props.tablelocale(pack.duration)} <span style={{float: 'right'}}><strong> {pack.cost} </strong></span> </p>
               )}
             </div>
             <div className='modalBtn'>
-            <button onClick={handleChange}> Close </button>
+            <button onClick={handleChange}> {props.tablelocale("Close")} </button>
             </div>
           </Modal.Content>
         </Modal>
@@ -111,6 +109,7 @@ const Pricing = (props) => {
   )
 }
 
+// Reschedule Component - Renders DatePicker
 const Reschedule = (props) => {
   // changes state in parent component through callback passed to it via props
   const { item, onTableUpdate } = props;
@@ -125,8 +124,10 @@ const Reschedule = (props) => {
 
   useEffect(() => {
     let datems = startDate.getTime();
+    // onTableUpdate is a callback function that passes campaign name and modified date 
+    // to the handleUpdate function in parent (App) component in order to change state 
     onTableUpdate(item, datems)
-  }, [startDate])
+  }, [startDate]) // eslint-disable-line
 
 
   const handleDate = (date) => {
@@ -136,8 +137,7 @@ const Reschedule = (props) => {
 // datepicker library used to select dates
   return (
     <div>
-    <span className='reschedule' onClick={handleCal}> <Image src={calIcon} alt='calendar' verticalAlign='middle' /> 
-    Schedule Again </span>
+    <span className='reschedule' onClick={handleCal}> <Image src={calIcon} alt='calendar' verticalAlign='middle'/> {props.tablelocale("Schedule Again")} </span>
     {showcal ? <div className='calendar'> <DatePicker selected={startDate} onChange={handleDate}/> </div> : null }
     </div>
   )

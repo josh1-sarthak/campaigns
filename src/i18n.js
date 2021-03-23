@@ -17,7 +17,6 @@ i18n.use(initReactI18next).init({
   },
   fallbackLng: 'en',
   lng: 'en',
-  debug: process.env.NODE_ENV !== 'production',
   ns: ['translations'],
   defaultNS: 'translations',
   keySeparator: false,
@@ -26,7 +25,7 @@ i18n.use(initReactI18next).init({
     formatSeparator: ',',
   },
   react: {
-    wait: true,
+    wait: true, 
     useSuspense: false,
   },
 });

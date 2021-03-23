@@ -15,8 +15,8 @@ const TabContent = (props) => {
     
     return (
         <div>
-            {props.className === 'upcoming' ? <TableContent campaignData={upcomingCampaign} className={t("Ahead")} onTabUpdate={props.onUpdate} />: 
-            props.className === 'live' ? <TableContent campaignData={liveCampaign} onTabUpdate={props.onUpdate} />:
+            {props.className === 'Upcoming' ? <TableContent campaignData={upcomingCampaign} className={t("Ahead")} onTabUpdate={props.onUpdate} />: 
+            props.className === 'Live' ? <TableContent campaignData={liveCampaign} onTabUpdate={props.onUpdate} />:
             <TableContent campaignData={pastCampaign} className={t("Ago")} onTabUpdate={props.onUpdate} />
             }
         </div>
