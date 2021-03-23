@@ -1,5 +1,5 @@
 ## How to run
-- cd to the folder in command line & npm install to install dependencies in package.json 
+- cd to the campaigns folder in command line & npm install to install dependencies in package.json 
 - yarn start
 
 ## Tech used
