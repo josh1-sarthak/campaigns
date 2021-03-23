@@ -6,7 +6,7 @@
 https://nick2496.github.io/campaigns/
 
 ## Code
--This repository contains all the code and assets.
+-This repository (https://github.com/nick2496/campaigns) contains all the code and assets.
 
 ## Deliverables
 |Description | Execution steps | Expected output|
