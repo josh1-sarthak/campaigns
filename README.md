@@ -2,6 +2,12 @@
 - cd to the folder in command line & npm install to install dependencies in package.json 
 - yarn start
 
+## Tech used
+- React, CSS Flexbox
+- Semantic UI React Library for responsive and consistent UI
+- react-datepicker to render Calendar
+- react-i18next for localization
+
 ## Deployment Link 
 https://nick2496.github.io/campaigns/
 
@@ -20,8 +26,4 @@ https://nick2496.github.io/campaigns/
 |Reflected Changed Date | Select any future date in Upcoming Campaign tab for any campaign | Date column reflects the changed date |
 |Responsive Modal on small devices | Check on small width devices from mobile to tablet | Modal is resposive in every device | 
 
-## Tech used
-- React, CSS Flexbox
-- Semantic UI React Library for responsive and consistent UI
-- react-datepicker to render Calendar
-- react-i18next for localization
+
