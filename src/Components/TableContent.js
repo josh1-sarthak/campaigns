@@ -69,15 +69,15 @@ const Pricing = (props) => {
   const subscriptions = [
     {
       duration: '1 Week - 1 Month',
-      cost: '$100',
+      cost: '$100.00',
     },
     {
       duration: '6 Months',
-      cost: '$100',
+      cost: '$100.00',
     },
     {
       duration: '1 Year',
-      cost: '$100',
+      cost: '$100.00',
     },
   ]
 
