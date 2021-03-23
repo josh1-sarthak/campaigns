@@ -1,5 +1,5 @@
 ## How to run
-- npm install for any dependency in package.json 
+- npm install to install dependencies in package.json 
 - yarn start
 
 ## Deployment Link 
