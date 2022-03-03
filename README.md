@@ -9,10 +9,10 @@
 - react-i18next for localization
 
 ## Deployment Link 
-https://nick2496.github.io/campaigns/
+https://josh1-sarthak.github.io/campaigns/
 
 ## Code
-- This repository (https://github.com/nick2496/campaigns) contains all the code and assets.
+- This repository (https://github.com/josh1-sarthak/campaigns) contains all the code and assets.
 
 ## Deliverables
 |Description | Execution steps | Expected output|
